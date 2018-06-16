@@ -6,7 +6,7 @@ module.exports = {
     connection: {
       user : process.env.USER || 'root',
       password : '',
-      database : 'rapid_template'
+      database : '{{ DATABASE_NAME }}'
     }
   }
 };
