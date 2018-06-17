@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "rapid": "./node_modules/.bin/rapid",
+    "rapid": "npx rapid",
     "start": "npm run rapid",
     "watch": "npm run rapid --watch",
     "clear": "npm run rapid clear",
@@ -16,6 +16,6 @@
   "author": "James Meyers",
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "git+https://github.com/jmeyers91/rapid.git"
+    "npx": "^10.2.0"
   }
 }

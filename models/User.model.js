@@ -1,6 +1,6 @@
 
-module.exports = rapid =>
-  class User extends rapid.Model {
+module.exports = rapid => {
+  return class User extends rapid.Model {
     static get tableName() {
       return 'users';
     }
@@ -13,8 +13,9 @@ module.exports = rapid =>
           id: {type: 'integer'},
           name: {type: 'string', minLength: 2},
           username: {type: 'string', minLength: 2},
-          password: {type: 'string', minLength: 2},
+          password: {type: 'string', minLength: 2}
         },
       };
     }
-  };
+  }
+};
