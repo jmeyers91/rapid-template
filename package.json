@@ -13,8 +13,6 @@
     "refresh": "npm run rapid clear migrate seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "James Meyers",
-  "license": "ISC",
   "dependencies": {
     "npx": "^10.2.0"
   }
