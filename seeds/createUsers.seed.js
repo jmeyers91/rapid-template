@@ -1,7 +1,7 @@
 
 module.exports = async function createUsers(rapid) {
   const { User } = rapid.models;
-  const { hashPassword } = rapid;
+  const { hashPassword } = rapid.helpers;
 
   return rapid.models.User.query().insert([
     {name: 'Jim', username: 'user', password: await hashPassword('secret')},

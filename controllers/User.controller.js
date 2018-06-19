@@ -1,5 +1,6 @@
 
 module.exports = rapid => {
+  const { verifyPassword } = rapid.helpers;
   return class UserController {
     getUsers() {
       const { User } = rapid.models;
@@ -16,7 +17,7 @@ module.exports = rapid => {
 
     async login({ username, password }) {
       const user = await this.getByUsername(username);
-      if(!user || !user.password === password) return;
+      if(!user || !await verifyPassword(password, user.password)) return;
       return user;
     }
   };
