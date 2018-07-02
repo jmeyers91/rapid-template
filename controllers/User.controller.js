@@ -17,8 +17,11 @@ module.exports = rapid => {
 
     async login({ username, password }) {
       const user = await this.getByUsername(username);
-      if(!user || !await verifyPassword(password, user.password)) return;
-      return user;
+      if(user && await verifyPassword(password, user.password)) {
+        delete user.password;
+        return user;
+      }
+      return null;
     }
   };
 };

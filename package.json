@@ -1,5 +1,5 @@
 {
-  "name": "rapid-template",
+  "name": "rapid-example",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -13,7 +13,13 @@
     "refresh": "npm run rapid clear migrate seed",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "James Meyers",
+  "license": "ISC",
   "dependencies": {
+    "@simplej/rapid": "0.0.10",
     "npx": "^10.2.0"
+  },
+  "devDependencies": {
+    "@simplej/rapid-cli": "0.0.12"
   }
 }

@@ -11,10 +11,10 @@ module.exports = rapid => {
       };
       context.response.status = 200;
     })
-    .get('/auth/secure', rapid.middleware.auth(), context => {
+    .get('/auth/secureExample', rapid.middleware.auth(), context => {
       context.response.body = 'Access granted!';
     })
-    .get('/auth/insecure', context => {
+    .get('/auth/insecureExample', context => {
       context.response.body = 'Welcome guest!';
     });
 };

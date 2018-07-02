@@ -1,12 +1,12 @@
 module.exports = {
   webserver: {
-    port: 8080
+    port: 9090
   },
   database: {
     connection: {
       user : process.env.USER || 'root',
       password : '',
-      database : '{{ DATABASE_NAME }}'
+      database : 'rapid_template'
     }
   }
 };
