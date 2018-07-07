@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+const execa = require('execa');
+const path = require('path');
+const { writeFile } = require('then-fs');
+const package = require('./package');
+const rapidCoreVersion = require('../rapid-core/package').version;
+const rapidCLIVersion = require('../rapid-cli/package').version;
+
+async function main() {
+  const version = await bumpVersion();
+
+  await execa('npm', ['install', `@simplej/rapid@${rapidCoreVersion}`]);
+  await execa('npm', ['install', `@simplej/rapid-cli@${rapidCLIVersion}`]);
+  await execa('git', ['add', '*']);
+  await execa('git', ['commit', '-am', '🚀 ' + version]);
+  await execa('git', ['push', 'origin', 'master']);
+  console.log(`Rapid-template version ${version} published\n  Rapid version ${rapidCoreVersion}\n  CLI version ${rapidCLIVersion})`);
+}
+
+async function bumpVersion() {
+  const [ major, minor, patch ] = package.version.split(/\./g).map(n => +n);
+  package.version = `${major}.${minor}.${patch + 1}`;
+  await writeFile(path.join(__dirname, 'package.json'), JSON.stringify(package, null, 2));
+  return package.version;
+}
+
+main().catch(error => console.log(error));
