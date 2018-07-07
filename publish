@@ -15,7 +15,7 @@ async function main() {
   await execa('git', ['add', '*']);
   await execa('git', ['commit', '-am', '🚀 ' + version]);
   await execa('git', ['push', 'origin', 'master']);
-  console.log(`Rapid-template version ${version} published\n  Rapid version ${rapidCoreVersion}\n  CLI version ${rapidCLIVersion})`);
+  console.log(`Rapid-template version ${version} published\n  Rapid version ${rapidCoreVersion}\n  CLI version ${rapidCLIVersion}`);
 }
 
 async function bumpVersion() {
