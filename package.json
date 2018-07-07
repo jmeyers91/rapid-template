@@ -1,6 +1,6 @@
 {
   "name": "rapid-example",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,10 +16,10 @@
   "author": "James Meyers",
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "0.0.13",
+    "@simplej/rapid": "0.0.14",
     "npx": "^10.2.0"
   },
   "devDependencies": {
-    "@simplej/rapid-cli": "0.0.18"
+    "@simplej/rapid-cli": "0.0.19"
   }
 }
