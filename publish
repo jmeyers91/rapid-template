@@ -17,7 +17,7 @@ async function main() {
   await execa('git', ['add', '*'], {cwd});
   await execa('git', ['commit', '-am', '🚀 ' + version], {cwd});
   await execa('git', ['push', 'origin', 'master'], {cwd});
-  console.log(`Rapid-template version ${version} published\n  Rapid version ${rapidCoreVersion}\n  CLI version ${rapidCLIVersion}`);
+  console.log(`@simplej/rapid-template version ${version} published\n  Rapid version ${rapidCoreVersion}\n  CLI version ${rapidCLIVersion}`);
 }
 
 async function bumpVersion() {
