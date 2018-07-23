@@ -1,6 +1,7 @@
 
 module.exports = rapid => {
   const { verifyPassword } = rapid.helpers;
+
   return class UserController {
     getUsers() {
       const { User } = rapid.models;
