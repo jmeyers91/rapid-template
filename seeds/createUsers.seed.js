@@ -1,5 +1,4 @@
 
-
 module.exports = async function createUsers(rapid) {
   const { User } = rapid.models;
   const { hashPassword } = rapid.helpers;
