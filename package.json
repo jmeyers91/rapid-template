@@ -11,6 +11,7 @@
     "migrate": "npm run rapid migrate",
     "seed": "npm run rapid seed",
     "refresh": "npm run rapid clear migrate seed",
+    "update:rapid": "npm install @simplej/rapid @simplej/rapid-cli",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "James Meyers",
