@@ -13,7 +13,7 @@
     "refresh": "npm run rapid clear migrate seed",
     "update:rapid": "npm install @simplej/rapid @simplej/rapid-cli",
     "generate": "plop",
-    "test": "jest"
+    "test": "export NODE_ENV='test' && jest"
   },
   "license": "ISC",
   "dependencies": {
