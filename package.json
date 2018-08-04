@@ -1,6 +1,6 @@
 {
   "name": "rapid-example",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "0.0.23",
-    "@simplej/rapid-cli": "0.0.26",
+    "@simplej/rapid": "0.0.24",
+    "@simplej/rapid-cli": "0.0.27",
     "npx": "^10.2.0"
   },
   "devDependencies": {
