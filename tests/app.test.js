@@ -6,7 +6,9 @@ const rapidTest = Rapid.test(() =>
 );
 
 describe('Rapid app', () => {
+
   rapidTest('Should start successfully', rapid => {
     expect(rapid).toBeTruthy();
   });
+
 });
