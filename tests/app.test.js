@@ -9,8 +9,17 @@ const rapidTest = Rapid.test(() =>
     .autoload()
 );
 
-describe('Rapid app', () => {
+describe('app', () => {
   rapidTest('Should start successfully', rapid => {
     expect(rapid).toBeTruthy();
+  });
+
+  rapidTest('Should be able to login', async rapid => {
+    const response = await rapid.axios.post('/api/auth/login', {
+      username: 'jim',
+      password: 'secret'
+    });
+    expect(response.status).toEqual(200);
+    expect(response.data.authToken).toBeTruthy();
   });
 });

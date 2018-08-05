@@ -18,8 +18,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "0.0.33",
-    "@simplej/rapid-cli": "0.0.35",
+    "@simplej/rapid": "0.0.34",
+    "@simplej/rapid-cli": "0.0.36",
     "npx": "^10.2.0"
   },
   "devDependencies": {
