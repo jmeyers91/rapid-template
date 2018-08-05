@@ -1,6 +1,6 @@
 {
   "name": "rapid-app",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,8 +18,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "0.0.28",
-    "@simplej/rapid-cli": "0.0.31",
+    "@simplej/rapid": "0.0.29",
+    "@simplej/rapid-cli": "0.0.32",
     "npx": "^10.2.0"
   },
   "devDependencies": {
