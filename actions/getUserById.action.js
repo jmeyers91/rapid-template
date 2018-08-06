@@ -1,12 +1,8 @@
-
-module.exports = rapid => rapid.action(
-  'getUserById',
-  async () => {
+module.exports = rapid =>
+  rapid.action('getUserById', async () => {
     const { User } = rapid.models;
 
-    return User
-      .query()
+    return User.query()
       .where('id', id)
       .first();
-  }
-);
+  });
