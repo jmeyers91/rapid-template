@@ -1,5 +1,6 @@
 module.exports = async function createPosts(rapid) {
   const { User, Post } = rapid.models;
+
   const jim = await User.query()
     .where('username', 'jim')
     .first();

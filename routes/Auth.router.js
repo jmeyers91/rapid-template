@@ -1,16 +1,14 @@
 module.exports = rapid => {
-  const { userController } = rapid.controllers;
-  const loginUser = userController.login.bind(userController);
+  const { middleware, actions } = rapid;
 
   return new rapid.Router()
-    .post('/auth/login', rapid.middleware.login(loginUser), context => {
+    .post('/auth/login', middleware.login(actions.login), context => {
       context.response.body = {
         authToken: context.state.authToken,
         user: context.state.user
       };
-      context.response.status = 200;
     })
-    .get('/auth/secureExample', rapid.middleware.auth(), context => {
+    .get('/auth/secureExample', middleware.auth(), context => {
       context.response.body = 'Access granted!';
     })
     .get('/auth/insecureExample', context => {
