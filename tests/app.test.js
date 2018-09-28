@@ -15,12 +15,12 @@ describe('app', () => {
   });
 
   rapidTest('Should be able to login', async rapid => {
-    const response = await rapid.axios.post('/api/auth/login', {
+    const response = await rapid.axios.post('/api/login', {
       username: 'jim',
       password: 'secret'
     });
-    // expect(response.data).toBeFalsy();
+
     expect(response.status).toEqual(200);
-    // expect(response.data.authToken).toBeTruthy();
+    expect(response.data.authToken).toBeTruthy();
   });
 });

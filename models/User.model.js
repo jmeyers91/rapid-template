@@ -2,17 +2,13 @@ module.exports = rapid => {
   const { Model, models } = rapid;
 
   return class User extends Model {
-    static get tableName() {
-      return 'users';
-    }
-    static get singularName() {
-      return 'user';
-    }
+    static get tableName() { return 'users'; }
+    static get singularName() { return 'user'; }
 
     static get jsonSchema() {
       return {
         type: 'object',
-        required: ['name', 'age', 'username', 'password'],
+        required: [ 'name', 'age', 'username', 'password' ],
         properties: {
           id: { type: 'integer' },
           age: { type: 'integer' },

@@ -1,3 +1,4 @@
+
 module.exports = async function createPosts(rapid) {
   const { User, Post } = rapid.models;
 
@@ -10,7 +11,7 @@ module.exports = async function createPosts(rapid) {
 
   return Post.query().insert([
     { authorId: jim.id, title: 'First post', content: 'Hello world!' },
-    { authorId: sarah.id, title: 'Second post', content: 'Lorem ipsum' }
+    { authorId: sarah.id, title: 'Second post', content: 'Lorem ipsum' },
   ]);
 };
 

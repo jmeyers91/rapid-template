@@ -1,12 +1,13 @@
-module.exports = rapid =>
+
+module.exports = rapid => {
   rapid.action(
     'getUserByUsername',
     {
       type: 'object',
-      required: ['username'],
+      required: [ 'username' ],
       properties: {
-        username: { type: 'string' }
-      }
+        username: { type: 'string' },
+      },
     },
     async ({ username }) => {
       const { User } = rapid.models;
@@ -16,3 +17,4 @@ module.exports = rapid =>
         .first();
     }
   );
+};

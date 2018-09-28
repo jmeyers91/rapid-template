@@ -3,19 +3,15 @@ module.exports = rapid => {
   const { Model, models } = rapid;
 
   return class {{properCase singularName}} extends Model {
-    static get tableName() {
-      return '{{snakeCase pluralName}}';
-    }
-    static get singularName() {
-      return '{{snakeCase singularName}}';
-    }
+    static get tableName() { return '{{snakeCase pluralName}}'; }
+    static get singularName() { return '{{snakeCase singularName}}'; }
 
     static get jsonSchema() {
       return {
         type: 'object',
         required: [],
         properties: {
-          id: {type: 'integer'},
+          id: { type: 'integer' },
         },
       };
     }

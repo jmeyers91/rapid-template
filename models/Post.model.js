@@ -2,12 +2,8 @@ module.exports = rapid => {
   const { Model, models } = rapid;
 
   return class Post extends Model {
-    static get tableName() {
-      return 'posts';
-    }
-    static get singularName() {
-      return 'post';
-    }
+    static get tableName() { return 'posts'; }
+    static get singularName() { return 'post'; }
 
     static get jsonSchema() {
       return {
