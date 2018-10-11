@@ -1,12 +1,16 @@
+const { env } = process;
+
 module.exports = {
   webserver: {
-    port: 9090
+    port: env['PORT'] || 9090,
+    publicDir: 'public',
   },
   database: {
-    connection: {
-      user: process.env.USER || 'root',
+    ssl: !!env['DATABASE_URL'],
+    connection: env['DATABASE_URL'] || {
+      user: env['USER'] || 'root',
       password: '',
       database: '{{ databaseName }}'
-    }
-  }
+    },
+  },
 };
