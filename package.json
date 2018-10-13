@@ -19,6 +19,7 @@
   "dependencies": {
     "@simplej/rapid": "0.0.60",
     "@simplej/rapid-cli": "0.0.43",
+    "@simplej/rapid-plop": "^1.0.0",
     "npx": "^10.2.0"
   },
   "devDependencies": {
