@@ -1,3 +1,5 @@
+const { env } = process;
+
 // This config file is only used for testing and will be overridden with config.template.js during scaffolding
 module.exports = {
   webserver: {
@@ -6,7 +8,7 @@ module.exports = {
   },
   database: {
     connection: {
-      user: process.env.USER || 'root',
+      user: env['USER'] || 'root',
       password: '',
       database: 'rapid_template'
     }
