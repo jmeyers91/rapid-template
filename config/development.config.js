@@ -10,7 +10,7 @@ module.exports = {
     connection: {
       user: env['USER'] || 'root',
       password: '',
-      database: 'rapid_template'
-    }
-  }
+      database: 'rapid_template',
+    },
+  },
 };

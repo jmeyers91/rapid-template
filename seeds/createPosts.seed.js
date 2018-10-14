@@ -1,4 +1,3 @@
-
 module.exports = async function createPosts(rapid) {
   const { User, Post } = rapid.models;
 

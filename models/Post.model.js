@@ -2,8 +2,12 @@ module.exports = rapid => {
   const { Model, models } = rapid;
 
   return class Post extends Model {
-    static get tableName() { return 'posts'; }
-    static get singularName() { return 'post'; }
+    static get tableName() {
+      return 'posts';
+    }
+    static get singularName() {
+      return 'post';
+    }
 
     static get jsonSchema() {
       return {
@@ -12,8 +16,8 @@ module.exports = rapid => {
         properties: {
           id: { type: 'integer' },
           title: { type: 'string', minLength: 2 },
-          content: { type: 'string', minLength: 2 }
-        }
+          content: { type: 'string', minLength: 2 },
+        },
       };
     }
 
@@ -24,9 +28,9 @@ module.exports = rapid => {
           modelClass: models.User,
           join: {
             from: 'users.id',
-            to: 'posts.authorId'
-          }
-        }
+            to: 'posts.authorId',
+          },
+        },
       };
     }
   };

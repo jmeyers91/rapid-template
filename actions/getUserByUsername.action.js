@@ -1,10 +1,9 @@
-
 module.exports = rapid => {
   rapid.action(
     'getUserByUsername',
     {
       type: 'object',
-      required: [ 'username' ],
+      required: ['username'],
       properties: {
         username: { type: 'string' },
       },
@@ -15,6 +14,6 @@ module.exports = rapid => {
       return User.query()
         .where('username', username)
         .first();
-    }
+    },
   );
 };

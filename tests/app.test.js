@@ -6,7 +6,7 @@ const rapidTest = Rapid.test(() =>
     .clear()
     .migrate()
     .seed()
-    .autoload()
+    .autoload(),
 );
 
 describe('app', () => {
@@ -17,7 +17,7 @@ describe('app', () => {
   rapidTest('Should be able to login', async rapid => {
     const response = await rapid.axios.post('/api/login', {
       username: 'jim',
-      password: 'secret'
+      password: 'secret',
     });
 
     expect(response.status).toEqual(200);

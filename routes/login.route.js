@@ -1,4 +1,3 @@
-
 module.exports = rapid => {
   const { middleware, actions } = rapid;
 
@@ -8,8 +7,8 @@ module.exports = rapid => {
     async context => {
       context.response.body = {
         authToken: context.state.authToken,
-        user: context.state.user
+        user: context.state.user,
       };
-    }
+    },
   );
 };

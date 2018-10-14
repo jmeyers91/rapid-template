@@ -12,7 +12,7 @@
     "refresh": "npx rapid clear migrate seed",
     "update:rapid": "npm install @simplej/rapid@latest @simplej/rapid-cli@latest",
     "generate": "npx plop",
-    "format": "npx prettier --single-quote --write \"{config,controllers,hooks,migrations,models,actions,routes,routers,seeds,tests}/**/*.js\"",
+    "format": "npx prettier --write \"{config,controllers,hooks,migrations,models,actions,routes,routers,seeds,tests}/**/*.js\"",
     "test": "export NODE_ENV='test' && npx jest"
   },
   "license": "ISC",

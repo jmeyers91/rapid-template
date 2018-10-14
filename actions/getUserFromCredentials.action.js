@@ -1,10 +1,9 @@
-
 module.exports = rapid => {
   rapid.action(
     'getUserFromCredentials',
     {
       type: 'object',
-      required: [ 'username', 'password' ],
+      required: ['username', 'password'],
       properties: {
         username: { type: 'string' },
         password: { type: 'string' },
@@ -20,6 +19,6 @@ module.exports = rapid => {
         return user;
       }
       return null;
-    }
+    },
   );
 };
