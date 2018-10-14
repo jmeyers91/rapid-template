@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
 const level = process.argv[2] || 'minor';
-require('../publish')(__dirname, level);
+require('../publish')(__dirname, level, { noNpm: true });
