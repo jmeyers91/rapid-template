@@ -1,8 +1,6 @@
 {
   "name": "Rapid Template",
-  "description": "",
-  "repository": "",
-  "keywords": ["node", "@simplej/rapid"],
+  "keywords": ["node"],
   "addons": [
     "heroku-postgresql"
   ],
