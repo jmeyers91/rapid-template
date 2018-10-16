@@ -1,3 +1,6 @@
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 # Rapid App
 
 This app was created with the [Rapid CLI](https://github.com/jmeyers91/rapid-cli).
