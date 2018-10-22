@@ -17,8 +17,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "0.0.67",
-    "@simplej/rapid-cli": "0.0.53",
+    "@simplej/rapid": "0.0.71",
+    "@simplej/rapid-cli": "0.0.54",
     "@simplej/rapid-plop": "^1.0.3",
     "npx": "^10.2.0",
     "uuid": "^3.3.2"

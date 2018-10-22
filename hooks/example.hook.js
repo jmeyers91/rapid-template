@@ -20,6 +20,8 @@ module.exports = {
   // routersDidAttach(rapid) {},
   // seedsWillRun(rapid) {},
   // seedsDidRun(rapid) {},
+  // middlewareWillAttach(rapid) {},
+  // middlewareDidAttach(rapid) {},
   // webserverWillListen(rapid) {},
   // webserverDidListen(rapid) {},
   // rapidDidStart(rapid) {},
