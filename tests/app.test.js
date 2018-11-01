@@ -23,4 +23,10 @@ describe('app', () => {
     expect(response.status).toEqual(200);
     expect(response.data.authToken).toBeTruthy();
   });
+
+  rapidTest('Should be able to request users', async rapid => {
+    const response = await rapid.axios.get('/api/users');
+
+    expect(response.status).toEqual(200);
+  });
 });
