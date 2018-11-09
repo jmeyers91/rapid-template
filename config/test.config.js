@@ -2,6 +2,7 @@ const { env } = process;
 const uuid = require('uuid/v4');
 
 module.exports = {
+  logActions: false,
   webserver: {
     port: 'auto',
     publicDir: 'public',
