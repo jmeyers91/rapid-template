@@ -3,6 +3,7 @@ const uuid = require('uuid/v4');
 
 module.exports = {
   logActions: false,
+  socketIO: false,
   webserver: {
     port: 'auto',
     publicDir: 'public',
@@ -12,7 +13,7 @@ module.exports = {
     connection: {
       user: env['USER'] || 'root',
       password: '',
-      database: 'rapid_example_test_' + uuid().replace(/-/g, '_'),
+      database: 'rapid_test_' + uuid().replace(/-/g, '_'),
     },
   },
 };

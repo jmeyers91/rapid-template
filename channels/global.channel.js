@@ -1,6 +1,7 @@
 module.exports = rapid => {
-  rapid.io()
-    .on('connect', socket => {
-      // socket.on('echo', data => socket.emit(data));
-    });
+  // Set config.socketIO to true to enable sockets
+  // rapid.io()
+  //   .on('connect', socket => {
+  //     socket.on('echo', data => socket.emit('echo', data));
+  //   });
 };

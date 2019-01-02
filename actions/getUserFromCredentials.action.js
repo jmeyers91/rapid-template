@@ -1,5 +1,6 @@
 module.exports = rapid => {
-  rapid.action('getUserFromCredentials')
+  rapid
+    .action('getUserFromCredentials')
     .schema({
       type: 'object',
       required: ['username', 'password'],
@@ -16,7 +17,8 @@ module.exports = rapid => {
       if (user && (await verifyPassword(password, user.password))) {
         delete user.password;
         return user;
+      } else {
+        return null;
       }
-      return null;
     });
 };

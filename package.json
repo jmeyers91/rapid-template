@@ -12,14 +12,15 @@
     "refresh": "npx rapid clear migrate seed",
     "update:rapid": "npm install @simplej/rapid@latest @simplej/rapid-cli@latest @simplej/rapid-plop@latest",
     "generate": "npx plop",
-    "format": "npx prettier --write \"{config,controllers,hooks,migrations,models,actions,routes,routers,seeds,tests}/**/*.js\"",
-    "test": "export NODE_ENV='test' && npx jest"
+    "format": "npx prettier --write \"**/*.js\"",
+    "test": "NODE_ENV='test' npx jest"
   },
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "0.0.98",
+    "@simplej/rapid": "0.0.99",
     "@simplej/rapid-cli": "0.0.58",
     "@simplej/rapid-plop": "^1.0.7",
+    "normalize-email": "^1.1.1",
     "npx": "^10.2.0",
     "uuid": "^3.3.2"
   },

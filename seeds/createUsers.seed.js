@@ -1,21 +1,18 @@
 module.exports = async function createUsers(rapid) {
-  const { User } = rapid.models;
-  const { hashPassword } = rapid.helpers;
+  const { actions } = rapid;
 
-  return User.query().insert([
-    {
-      name: 'Jim',
-      username: 'jim',
-      age: 27,
-      password: await hashPassword('secret'),
-    },
-    {
-      name: 'Sarah',
-      username: 'sarah',
-      age: 23,
-      password: await hashPassword('pineapple'),
-    },
-  ]);
+  return Promise.all(
+    [
+      {
+        email: 'user@test.com',
+        password: 'secret',
+      },
+      {
+        email: 'user2@test.com',
+        password: 'secret',
+      },
+    ].map(actions.createUser),
+  );
 };
 
 module.exports.runOrder = 1;

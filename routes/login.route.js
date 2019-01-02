@@ -5,10 +5,13 @@ module.exports = rapid => {
     '/login',
     middleware.login(actions.getUserFromCredentials),
     async context => {
-      context.response.body = {
-        authToken: context.state.authToken,
-        user: context.state.user,
-      };
+      const { user, authToken } = context.state;
+
+      context.cookies.set('authToken', authToken, { httpOnly: true });
+      context.success({
+        user,
+        authToken: process.env['NODE_ENV'] === 'test' ? authToken : null,
+      });
     },
   );
 };

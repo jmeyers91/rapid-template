@@ -1,5 +1,8 @@
 module.exports = rapid => {
-  rapid.action('getUserByUsername')
+  const normalizeEmail = require('normalize-email');
+
+  rapid
+    .action('getUserByUsername')
     .schema({
       type: 'object',
       required: ['username'],
@@ -11,7 +14,7 @@ module.exports = rapid => {
       const { User } = rapid.models;
 
       return User.query()
-        .where('username', username)
+        .where('email', normalizeEmail(username))
         .first();
     });
 };
