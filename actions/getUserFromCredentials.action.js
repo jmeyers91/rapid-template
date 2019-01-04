@@ -1,13 +1,13 @@
 module.exports = rapid => {
   rapid
-    .action('getUserFromCredentials')
+    .action("getUserFromCredentials")
     .schema({
-      type: 'object',
-      required: ['username', 'password'],
+      type: "object",
+      required: ["username", "password"],
       properties: {
-        username: { type: 'string' },
-        password: { type: 'string' },
-      },
+        username: { type: "string" },
+        password: { type: "string" }
+      }
     })
     .receiver(async ({ username, password }) => {
       const { getUserByUsername } = rapid.actions;

@@ -13,6 +13,7 @@
     "update:rapid": "npm install @simplej/rapid@latest @simplej/rapid-cli@latest @simplej/rapid-plop@latest",
     "generate": "npx plop",
     "format": "npx prettier --write \"**/*.js\"",
+    "lint": "npx eslint \"**/*.js\"",
     "test": "NODE_ENV='test' npx jest"
   },
   "license": "ISC",
@@ -25,8 +26,13 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "eslint": "^5.11.1",
+    "eslint-plugin-jest": "^22.1.2",
     "jest": "^23.4.2",
     "plop": "^2.0.0",
     "prettier": "^1.15.1"
+  },
+  "prettier": {
+    
   }
 }
