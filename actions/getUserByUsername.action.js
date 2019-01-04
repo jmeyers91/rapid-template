@@ -1,20 +1,20 @@
 module.exports = rapid => {
-  const normalizeEmail = require("normalize-email");
+  const normalizeEmail = require('normalize-email');
 
   rapid
-    .action("getUserByUsername")
+    .action('getUserByUsername')
     .schema({
-      type: "object",
-      required: ["username"],
+      type: 'object',
+      required: ['username'],
       properties: {
-        username: { type: "string" }
-      }
+        username: { type: 'string' },
+      },
     })
     .receiver(async ({ username }) => {
       const { User } = rapid.models;
 
       return User.query()
-        .where("email", normalizeEmail(username))
+        .where('email', normalizeEmail(username))
         .first();
     });
 };

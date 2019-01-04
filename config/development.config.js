@@ -7,13 +7,13 @@ module.exports = {
   jwtDuration: 1000 * 60 * 60 * 24 * 30, // 1 month
   webserver: {
     port: 9090,
-    publicDir: "public"
+    publicDir: 'public',
   },
   database: {
     connection: {
-      user: env["USER"] || "root",
-      password: "",
-      database: "rapid_template"
-    }
-  }
+      user: env['USER'] || 'root',
+      password: '',
+      database: 'rapid_template',
+    },
+  },
 };

@@ -3,21 +3,21 @@ module.exports = rapid => {
 
   return class Post extends Model {
     static get tableName() {
-      return "posts";
+      return 'posts';
     }
     static get singularName() {
-      return "post";
+      return 'post';
     }
 
     static get jsonSchema() {
       return {
-        type: "object",
-        required: ["title", "content"],
+        type: 'object',
+        required: ['title', 'content'],
         properties: {
-          id: { type: "integer" },
-          title: { type: "string", minLength: 2 },
-          content: { type: "string", minLength: 2 }
-        }
+          id: { type: 'integer' },
+          title: { type: 'string', minLength: 2 },
+          content: { type: 'string', minLength: 2 },
+        },
       };
     }
 
@@ -27,10 +27,10 @@ module.exports = rapid => {
           relation: Model.BelongsToOneRelation,
           modelClass: models.User,
           join: {
-            from: "users.id",
-            to: "posts.authorId"
-          }
-        }
+            from: 'users.id',
+            to: 'posts.authorId',
+          },
+        },
       };
     }
   };
