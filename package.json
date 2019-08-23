@@ -18,7 +18,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@simplej/rapid": "0.0.99",
+    "@simplej/rapid": "0.0.109",
     "@simplej/rapid-cli": "0.0.58",
     "@simplej/rapid-plop": "^1.0.7",
     "normalize-email": "^1.1.1",
